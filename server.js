@@ -14,12 +14,13 @@ const q7 = (req, res) => res.render('pages/question7');
 const q8 = (req, res) => res.render('pages/question8');
 const q9 = (req, res) => res.render('pages/question9');
 const q10 = (req, res) => res.render('pages/question10');
+const homepage = (req, res) => res.render('pages/homepage')
 
 express()
     // This will give us will log more info to the console. see https://www.npmjs.com/package/morgan
     .use(morgan('tiny'))
     // Any requests for static files will go into the public folder
-    .use(express.static('public'))
+    .use(express.static('public')) //this makes that users only have access to public
     // We are using ejs as our templating engine. see https://ejs.co/
     .set('view engine', 'ejs')
 
@@ -34,7 +35,7 @@ express()
     .get('/question8', q8)
     .get('/question9', q9)
     .get('/question10', q10)
-    
+    .get('/', homepage)
     // this serves up the homepage
     .get('/', (req, res) => {
         res.send('This is the homepage... it\'s empty :(');
@@ -44,7 +45,7 @@ express()
     // defined above, they get to see our 404 page.
     .get('*', (req, res) => {
         res.status(404);
-        res.send('404... This is not the page you are looking for.');
+        res.render('pages/fourOhFour');
     })
 
     // Node spins up our server and sets it to listen on the PORT we defined above.

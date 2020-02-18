@@ -1,0 +1,22 @@
+<script>
+    let next = window.location.href.slice(21, window.location.href.length-1)
+    let page = parseInt(window.location.href.charAt(window.location.href.length-1))
+    page ++;
+    next += page;
+    let previous = window.location.href.slice(21, window.location.href.length-1)
+    page = parseInt(window.location.href.charAt(window.location.href.length-1))
+    if (page==0){
+        previous = window.location.href.slice(21, window.location.href.length-2)
+        page=9;
+    }else if(page==1){
+        previous="/"
+        page=''
+    }else{
+    page --;
+    }
+    previous += page;
+</script>
+<div class="buttons">
+    <button onclick='function j() {location.href=previous};j()'>Previous</button>
+    <button onclick='function j() {location.href=next};j()'>Next</button>
+</div>
