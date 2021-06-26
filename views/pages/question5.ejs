@@ -14,8 +14,16 @@
             <div class='box answer'>
                 <h3>Answer</h3>
                 <!-- render answer here -->
-
+                <ol><h3>Top 5 girls names in the England and Wales</h3>
+                    <%let names = Object.keys(popularGirlNames)%>
+                    <%let i=1%>
+                    <%names.forEach((element,index) => {%>
+                        <li><%-index+1%>. <%-popularGirlNames[element]%></li>
+                    <%});%>
+                </ol>
+                
             </div>
         </div>
+        <%- include('../partials/answers/buttons')%>
     </div>
 </body>

@@ -6,6 +6,8 @@
 
 ### Why Node?
 
+`backend`
+
 ---
 
 Server-side rendering VS. Client-side rendering [🔗](https://www.codeconquest.com/website/client-side-vs-server-side/)
@@ -16,7 +18,7 @@ _thoughts?_
 
 ### Binaries
 
-On your hard drive on your computer you have many files that called **binaries**
+On your hard drive on your computer you have many files that called **binaries** - `~apps`
 
 For example: Chrome, Photoshop, VS Code, iMovie, World of Warcraft, etc...
 
@@ -62,6 +64,8 @@ _Clearly it's best to use things that's already built._
 ---
 
 Enter [NPM](https://www.npmjs.com/https://www.npmjs.com/)
+
+yarn and PM are the same
 
 npm is a tool that lets you download code written by others.
 

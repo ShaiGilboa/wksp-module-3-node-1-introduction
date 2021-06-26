@@ -1,8 +1,5 @@
-<!DOCTYPE html>
-<head>
-    <title>Node: Workshop 1</title>
-    <link rel="stylesheet" href="./css/styles.css">
-</head>
+<%- include('../partials/answers/head') %>
+
 <body>
     <header>
         <h1>Node: Workshop 1</h1>
@@ -12,10 +9,17 @@
         <div class='content'>
             <%- include('../partials/questions/3') %>
             <div class='box answer'>
-                <h3>Answer</h3>
+                <h3>Answer
+                </h3>
+                <img src="https://vignette.wikia.nocookie.net/simpsons/images/0/02/Homer_Simpson_2006.png" alt="homer eating a donut" class="homer-eating">
                 <!-- render answer here -->
-                
+                <%let index=0%>
+                <%let keys = Object.keys(homer) %>
+                <%keys.forEach(element => {%>
+                    <li id=<%-`${index}`%>><p><%-element%>: <%-homer[element]%></p></li>
+                <%index++});%>
             </div>
         </div>
+        <%- include('../partials/answers/buttons')%>
     </div>
 </body>
